@@ -22,10 +22,12 @@ def create_app():
     from app.routes.auth import auth
     from app.routes.race import race
     from app.routes.stats import stats
+    from app.routes.leaderboard import leaderboard
     app.register_blueprint(main)
     app.register_blueprint(auth)
     app.register_blueprint(race)
     app.register_blueprint(stats)
+    app.register_blueprint(leaderboard)
 
     from app import models
 

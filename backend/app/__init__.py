@@ -30,5 +30,6 @@ def create_app():
     app.register_blueprint(leaderboard)
 
     from app import models
+    from app import sockets
 
     return app

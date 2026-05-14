@@ -31,8 +31,8 @@ class Race(db.Model):
 
     id = db.Column(db.Integer, primary_key=True)
     passage_id = db.Column(db.Integer, db.ForeignKey('passages.id'), nullable=False)
-    race_type = db.Column(db.String(10), nullable=False)
-    status = db.Column(db.String(20), default='waiting')
+    race_type = db.Column(db.String(10), nullable=False) # solo / multi
+    status = db.Column(db.String(20), default='waiting') # waiting / in progress / finished
     start_time = db.Column(db.DateTime)
     end_time = db.Column(db.DateTime)
 
